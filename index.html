@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Todos</title>
+    <link href="/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"/><link href="/stylesheets/tooltip.css" media="all" rel="stylesheet" type="text/css"/>
+    <script language="javascript" src="javascripts/mootools.js" type="text/javascript"></script><script language="javascript" src="javascripts/mootools-more.js" type="text/javascript"></script><script language="javascript" src="javascripts/underscore.js" type="text/javascript"></script><script language="javascript" src="javascripts/backbone.js" type="text/javascript"></script><script language="javascript" src="javascripts/backbone.localStorage.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id='todoapp'>
+      <div class='title'>
+        <h1>Todos</h1>
+      </div>
+      <div class='content'>
+        <div id='create-todo'>
+          <input id='new-todo' placeholder='What needs to be done?' type='text' />
+          <span class='ui-tooltip-top'>Press Enter to create this task</span>
+        </div>
+        <div id='todos'>
+          <ul id='todo-list'></ul>
+        </div>
+        <div id='todo-stats'></div>
+      </div>
+    </div>
+    <ul id='instructions'>
+      <li>Double-click to edit a todo.</li>
+      <li>Click, hold and drag to reorder your todos.</li>
+    </ul>
+    <div id='credits'>
+      Created by
+      <br />
+      <a href='http://jgn.me/'>J&eacute;r&ocirc;me Gravel-Niquet</a>
+    </div>
+    <script language="javascript" src="javascripts/todos.js" type="text/javascript"></script>
+  </body>
+</html>
