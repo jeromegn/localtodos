@@ -618,7 +618,7 @@
       if (this.el) return;
       var attrs = {};
       if (this.id) attrs.id = this.id;
-      if (this.className) attrs.className = this.className;
+      if (this.className) attrs.class = this.className;
       this.el = this.make(this.tagName, attrs);
     }
 

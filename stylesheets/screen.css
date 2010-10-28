@@ -75,28 +75,43 @@ body {
 
 /* line 17 */
 #todoapp {
-  width: 480px;
+  width: 520px;
   margin: 0 auto 40px auto;
   background: white;
-  padding: 20px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 /* line 24 */
 #todoapp .title h1 {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  padding: 20px 0 30px 0;
+  padding: 30px 0 10px 0;
   line-height: 1;
 }
-/* line 31 */
+/* line 30 */
+#todoapp .content {
+  padding: 20px;
+}
+/* line 32 */
 #todoapp .content #create-todo {
   position: relative;
 }
-/* line 33 */
+/* line 34 */
 #todoapp .content #create-todo input {
   width: 466px;
   font-size: 24px;
@@ -111,11 +126,11 @@ body {
   -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
 }
-/* line 44 */
+/* line 45 */
 #todoapp .content #create-todo input::-webkit-input-placeholder {
   font-style: italic;
 }
-/* line 46 */
+/* line 47 */
 #todoapp .content #create-todo span {
   position: absolute;
   z-index: 999;
@@ -124,11 +139,11 @@ body {
   margin-left: -85px;
   opacity: 0;
 }
-/* line 54 */
+/* line 55 */
 #todoapp .content ul#todo-list {
   margin-top: 10px;
 }
-/* line 56 */
+/* line 57 */
 #todoapp .content ul#todo-list li {
   padding: 15px 20px 15px 0;
   position: relative;
@@ -146,12 +161,12 @@ body {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 63 */
+/* line 64 */
 #todoapp .content ul#todo-list li.editing {
   padding: 0;
   border-bottom: 0;
 }
-/* line 66 */
+/* line 67 */
 #todoapp .content ul#todo-list li.editing .todo-input {
   display: block;
   width: 466px;
@@ -167,35 +182,35 @@ body {
   -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
 }
-/* line 78 */
+/* line 79 */
 #todoapp .content ul#todo-list li.editing .todo-content {
   display: none;
 }
-/* line 80 */
+/* line 81 */
 #todoapp .content ul#todo-list li.editing .todo-check {
   display: none;
 }
-/* line 82 */
+/* line 83 */
 #todoapp .content ul#todo-list li.editing .todo-destroy {
   display: none !important;
 }
-/* line 84 */
+/* line 85 */
 #todoapp .content ul#todo-list li .todo-input {
   display: none;
 }
-/* line 86 */
+/* line 87 */
 #todoapp .content ul#todo-list li .todo-check {
   position: relative;
   top: 6px;
   margin: 0 10px 0 7px;
   float: left;
 }
-/* line 92 */
+/* line 93 */
 #todoapp .content ul#todo-list li.done .todo-content {
   text-decoration: line-through;
   color: #777777;
 }
-/* line 95 */
+/* line 96 */
 #todoapp .content ul#todo-list li .todo-destroy {
   position: absolute;
   right: 0px;
@@ -206,18 +221,34 @@ body {
   height: 20px;
   background: url(/images/destroy.png) no-repeat center center;
 }
-/* line 105 */
+/* line 106 */
 #todoapp .content ul#todo-list li:hover .todo-destroy {
   display: block;
 }
-/* line 108 */
-#todoapp .content #todo-stats {
+/* line 109 */
+#todoapp #todo-stats {
   *zoom: 1;
   margin-top: 10px;
-  color: #777777;
+  color: #555555;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #f4fce8;
+  border-top: 1px solid #ededed;
+  padding: 0 20px;
+  line-height: 36px;
 }
 /* line 22, /opt/ree/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-#todoapp .content #todo-stats:after {
+#todoapp #todo-stats:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -225,34 +256,55 @@ body {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 112 */
-#todoapp .content #todo-stats .todo-count {
+/* line 118 */
+#todoapp #todo-stats .todo-count {
   float: left;
 }
-/* line 114 */
-#todoapp .content #todo-stats .todo-count .number {
+/* line 120 */
+#todoapp #todo-stats .todo-count .number {
   font-weight: bold;
-  color: #333333;
+  color: #555555;
 }
-/* line 117 */
-#todoapp .content #todo-stats .todo-clear {
+/* line 123 */
+#todoapp #todo-stats .todo-clear {
   float: right;
 }
-/* line 119 */
-#todoapp .content #todo-stats .todo-clear a {
-  color: #777777;
-  font-size: 12px;
+/* line 125 */
+#todoapp #todo-stats .todo-clear a {
+  display: block;
+  line-height: 20px;
+  text-decoration: none;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -o-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -khtml-border-radius: 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #555555;
+  font-size: 11px;
+  margin-top: 8px;
+  padding: 0 10px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
 }
-/* line 122 */
-#todoapp .content #todo-stats .todo-clear a:visited {
-  color: #777777;
+/* line 136 */
+#todoapp #todo-stats .todo-clear a:hover {
+  background: rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
 }
-/* line 124 */
-#todoapp .content #todo-stats .todo-clear a:hover {
-  color: #336699;
+/* line 139 */
+#todoapp #todo-stats .todo-clear a:active {
+  position: relative;
+  top: 1px;
 }
 
-/* line 128 */
+/* line 144 */
 #instructions {
   width: 520px;
   margin: 10px auto;
@@ -260,12 +312,12 @@ body {
   text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   text-align: center;
 }
-/* line 134 */
+/* line 150 */
 #instructions li {
   line-height: 2em;
 }
 
-/* line 137 */
+/* line 153 */
 #credits {
   width: 520px;
   margin: 30px auto;
@@ -273,7 +325,7 @@ body {
   text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
   text-align: center;
 }
-/* line 143 */
+/* line 159 */
 #credits a {
   color: #888888;
 }

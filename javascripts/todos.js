@@ -60,7 +60,7 @@
     },
     
     initialize: function() {
-      _.bindAll(this, 'render');
+      _.bindAll(this, 'render', 'close');
       this.model.bind('change', this.render);
       this.model.view = this;
     },
@@ -85,6 +85,9 @@
         this.$(".todo-check").removeProperty("checked");
         $(this.el).removeClass("done");
       }
+      
+      this.input = this.$(".todo-input");
+      this.input.addEvent('blur', this.close);
     },
     
     toggleDone: function() {
@@ -93,12 +96,17 @@
   
     edit: function() {
       $(this.el).addClass("editing");
+      //this.input.fireEvent("focus");
+      this.input.focus();
+    },
+    
+    close: function() {
+      this.model.save({content: this.input.getProperty("value")});
+      $(this.el).removeClass("editing");
     },
   
     updateOnEnter: function(e) {
-      if (e.code != 13) return;
-      this.model.save({content: this.$(".todo-input").getProperty("value")});
-      $(this.el).removeClass("editing");
+      if (e.code == 13) this.close();
     },
     
     clear: function() {
