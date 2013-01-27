@@ -1,0 +1,1 @@
+Moved the source to: https://github.com/jeromegn/backbone.localstorage
